@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "216045368481",
+    "project_id": "starbucks-fbd1a",
+    "storage_bucket": "starbucks-fbd1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216045368481:android:681258058867311ea16ce0",
+        "android_client_info": {
+          "package_name": "com.yongjun.www.starbucks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216045368481-et1d0832b42jijdt2eet1fi2ilid08e5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3GyXH2hr0gfum0U_htjRu38jqKTPxk-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216045368481-et1d0832b42jijdt2eet1fi2ilid08e5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
