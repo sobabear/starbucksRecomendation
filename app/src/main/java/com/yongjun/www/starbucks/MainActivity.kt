@@ -9,13 +9,16 @@ import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.google.ads.AdSize
 import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.common.internal.ImagesContract
 import com.google.firebase.database.DataSnapshot
@@ -38,6 +41,7 @@ class MainActivity : Activity() {
     var mList = ArrayList<Menus>()
     var mCount = 0
 
+    private lateinit var mAdView: AdView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -56,9 +60,14 @@ class MainActivity : Activity() {
         starbucksButton.setOnClickListener {
             showPopup()
         }
-        var id:String = "ca-app-pub-4294379690418901~5711042749"
-        MobileAds.initialize(this)
-        adView.loadAd(AdRequest.Builder().build())
+
+        MobileAds.initialize(this){}
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
+//        var id:String = "ca-app-pub-4294379690418901~5711042749"
+//        MobileAds.initialize(this)
+//        adView.loadAd(AdRequest.Builder().build())
 
     }
 
@@ -127,4 +136,7 @@ class MainActivity : Activity() {
         val random = Random.nextInt((size))
         return get(random)
     }
+
+
+
 }
