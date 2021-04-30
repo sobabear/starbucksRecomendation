@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Starbucks</string>
+    <string name="app_name">스타벅스 메뉴 추천</string>
+    <string name="internetSuccess">스타벅스 내용 불러오기에 성공하였습니다</string>
+    <string name="internetFail">인터넷 연결을 확인해주세요</string>
 </resources>
