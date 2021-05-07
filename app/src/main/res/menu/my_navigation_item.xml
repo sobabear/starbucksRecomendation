@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/randomTap"
+        android:title="랜덤 추천"
+        android:icon="@drawable/home1024mdpi"/>
+    <item android:id="@+id/searchTap"
+        android:title="메뉴 목록"
+        android:icon="@drawable/search1024mdpi"/>
+
+</menu>

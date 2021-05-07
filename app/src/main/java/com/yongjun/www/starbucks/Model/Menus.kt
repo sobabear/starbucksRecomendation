@@ -5,3 +5,4 @@ data class Menus(
     var url: String = ""
 ) {
 }
+
