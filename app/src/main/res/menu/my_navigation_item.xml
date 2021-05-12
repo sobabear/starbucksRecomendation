@@ -6,5 +6,4 @@
     <item android:id="@+id/searchTap"
         android:title="메뉴 목록"
         android:icon="@drawable/search1024mdpi"/>
-
 </menu>

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import com.yongjun.www.starbucks.Model.Menus
@@ -20,15 +21,18 @@ class CustomAdapter(private val context: Context, private val dateList: ArrayLis
         private val coffeeTextView = itemView.findViewById<TextView>(R.id.searchCoffeeName)
 
         fun bind(menu: Menus, context: Context) {
-            Picasso.get()
+            Glide.with(context)
                 .load(menu.url)
-                .into(coffeeImageView, object : Callback {
-                    override fun onError(e: Exception?) {
-                    }
-
-                    override fun onSuccess() {
-                    }
-                })
+                .into(coffeeImageView)
+//            Picasso.get()
+//                .load(menu.url)
+//                .into(coffeeImageView, object : Callback {
+//                    override fun onError(e: Exception?) {
+//                    }
+//
+//                    override fun onSuccess() {
+//                    }
+//                })
             coffeeTextView.text = menu.name
         }
     }

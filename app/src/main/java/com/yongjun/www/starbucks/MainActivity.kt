@@ -75,16 +75,6 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(RandomeFragment())
 
         botom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-
-
-//        starbucksButton.setOnClickListener {
-//            showPopup()
-//        }
-//
-//        MobileAds.initialize(this){}
-//        mAdView = findViewById(R.id.adView)
-//        val adRequest = AdRequest.Builder().build()
-//        mAdView.loadAd(adRequest)
     }
 
     private fun replaceFragment(fragment: Fragment){

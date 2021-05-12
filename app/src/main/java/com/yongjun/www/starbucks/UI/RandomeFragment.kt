@@ -12,6 +12,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.AlertDialogLayout
+import com.bumptech.glide.Glide
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
@@ -72,16 +73,22 @@ class RandomeFragment : Fragment() {
         val alertDialog = AlertDialog.Builder(activity)
             .setTitle("스벅신이 추천하는 메뉴는?")
             .create()
-        Picasso.get()
-            .load(randomeMenu.url)
-            .into(imageView, object : Callback {
-                override fun onSuccess() {
-                }
 
-                override fun onError(e: Exception?) {
-                }
-
-            })
+        activity?.let {
+            Glide.with(it)
+                .load(randomeMenu.url)
+                .into(imageView)
+        }
+//        Picasso.get()
+//            .load(randomeMenu.url)
+//            .into(imageView, object : Callback {
+//                override fun onSuccess() {
+//                }
+//
+//                override fun onError(e: Exception?) {
+//                }
+//
+//            })
 
         val saveButton = builderItem.findViewById<Button>(R.id.saveButton)
         saveButton.setOnClickListener {
